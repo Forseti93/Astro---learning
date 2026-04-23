@@ -1,0 +1,23 @@
+# build output
+LexAstro-theme/dist/
+LexAstro-theme/.astro/
+
+# dependencies
+LexAstro-theme/node_modules/
+
+# logs
+LexAstro-theme/npm-debug.log*
+LexAstro-theme/yarn-debug.log*
+LexAstro-theme/yarn-error.log*
+LexAstro-theme/pnpm-debug.log*
+
+
+# environment variables
+LexAstro-theme/.env
+LexAstro-theme/.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+LexAstro-theme/.idea/
