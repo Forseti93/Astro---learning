@@ -1,5 +1,10 @@
 ---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
+const seoTitle: string = "Lex Astro - Home";
+const pageTitle: string = "Welcome on my website!";
 ---
 
 <html lang="en">
@@ -9,9 +14,11 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Lex Astro Theme</title>
+		<title>{seoTitle}</title>
 	</head>
 	<body>
-		<h1>Lex Astro Theme</h1>
+		<Header />
+		<h1>{pageTitle}</h1>
+		<Footer />
 	</body>
 </html>
