@@ -1,12 +1,26 @@
 ---
-const platform = "github";
-const username = "withastro";
+import SocialIcon from "./SocialIcon.astro";
 ---
 
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+
+        & .social-icons {
+            list-style: none;
+            display: flex;
+            gap: 12px;
+        }
+    }
+</style>
+
 <footer>
-    <p>
-        Learn more about my projects on <a
-            href={`https://www.${platform}.com/${username}`}>{platform}</a
-        >!
-    </p>
+    <p>Learn more about me:</p>
+    <ul class="social-icons">
+        <li><SocialIcon platform={"GitHub"} username={"Forseti93"} /></li>
+        <li>
+            <SocialIcon platform={"Instagram"} username={"serhiilavrenov"} />
+        </li>
+    </ul>
 </footer>

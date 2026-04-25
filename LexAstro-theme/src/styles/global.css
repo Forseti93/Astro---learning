@@ -4,11 +4,31 @@ html {
 }
 
 body {
+  margin: 0;
+}
+
+main {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
+  max-width: 120ch;
   line-height: 1.5;
+  padding: 16px 32px;
+}
+
+main :first-child {
+  margin-top: 0;
+}
+
+main :last-child {
+  margin-bottom: 0;
+}
+
+
+header,
+footer {
+  width: 100%;
+  background-color: #72a8ff;
+  padding: 16px 32px;
 }
 
 * {
@@ -18,4 +38,36 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+}
+
+.social-icon {
+  padding: 0.5rem;
+}
+
+.menu {
+  background-color: #0d0950;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+:has(.menu[aria-expanded="true"]) nav {
+  display: inline-block;
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  nav {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
 }
