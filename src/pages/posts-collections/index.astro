@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("COLL_posts");
+
+const pageTitle = "Posts Collections";
+---
+
+<BaseLayout seoTitle={pageTitle}>
+    <section>
+        <h1>{pageTitle}</h1>
+        <p>*This is example of collections .md files for astro</p>
+        <h2>All posts:</h2>
+        <ul class="tags">
+            {
+                allPosts.map((post) => (
+                    <li class="tag">
+                        <a href={`/posts-collections/${post.id}`}>{post.data.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</BaseLayout>
+
+<style>
+    a {
+        color: #00539f;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tag {
+        margin: 0.25em;
+        border: dotted 1px #a1a1a1;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        font-size: 1.15em;
+        background-color: #f8fcfd;
+    }
+</style>

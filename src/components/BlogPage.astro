@@ -1,0 +1,12 @@
+---
+interface Props {
+    url: string;
+    title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<li>
+    <a href={url} target="_blank" aria-label={title}>{title}</a>
+</li>
