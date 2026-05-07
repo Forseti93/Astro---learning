@@ -19,3 +19,12 @@ Thumbs.db
 
 # Astro cache
 .astro/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Cloudflare Wrangler
+.wrangler/
+.dev.vars
