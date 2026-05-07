@@ -3,12 +3,21 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting.jsx";
 
-const seoTitle: string = "Lex Astro - Home";
+const seoTitle: string = "Astro Learning - Home";
 const pageTitle: string = "Welcome on my website!";
 ---
 
 <BaseLayout seoTitle={seoTitle}>
 	<h1>{pageTitle}</h1>
+	<p>
+		This is my first "hands on" with Astro.js. I liked this framework and
+		the documentation! <br />
+		You can try <a
+			href="https://docs.astro.build/en/tutorial/0-introduction/"
+			target="_blank"
+			rel="noopener noreferrer">the same official tutorial</a
+		> also.
+	</p>
 	<Greeting
 		client:visible={{ rootMargin: "200px" }}
 		messages={["Hi", "Hello", "Howdy", "Hey there"]}
