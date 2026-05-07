@@ -1,3 +1,5 @@
+Preview: https://astro-learning.sergeylavrenov93.workers.dev/
+
 # Astro Starter Kit: Minimal
 
 ```sh
